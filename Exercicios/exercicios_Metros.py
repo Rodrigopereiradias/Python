@@ -1,3 +1,4 @@
+import math
 def calmetros ():
     try:
         medida = float(input('uma disntacia em metros: '))
@@ -8,7 +9,7 @@ def calmetros ():
         calmetros()
     else:
         print('resultado {}m corresponde a {:.0f}cm e {:.0f}mm'.format(medida, cm, mm))
-        operacao = input('Qual a operação que vc vai utilizar: ')
+        init()
 def calsoma ():
     try:
         n1 = int(input('Digite um numero:  '))
@@ -19,7 +20,7 @@ def calsoma ():
         calsoma()
     else:
         print('O resultado da soma é : {}'.format(res))
-        operacao = input('Qual a operação que vc vai utilizar: ')
+        init()
 def calsubi ():
     try:
         n1 = int(input('Digite um numero:  '))
@@ -30,7 +31,7 @@ def calsubi ():
         calsubi()
     else:
         print('O resultado da subitração é : {}'.format(res))
-        operacao = input('Qual a operação que vc vai utilizar: ')
+        init()
 def calmuti():
     try:
         n1 = int(input('Digite um numero:  '))
@@ -41,7 +42,7 @@ def calmuti():
         calmuti()
     else:
         print('O resultado da mutiplicação é : {}'.format(res))
-        operacao = input('Qual a operação que vc vai utilizar: ')
+        init()
 def caldivi ():
     try:
         n1 = float(input('Digite um numero:  '))
@@ -53,23 +54,45 @@ def caldivi ():
     else:
         print('O resultado divisão é : {}'.format(res))
         print('O resultado simplificado : {:.0f}'.format(res))
-        operacao = input('Qual a operação que vc vai utilizar: ')
+        init()
+def calraiz ():
+    try:
+        n1 = float(input('Digite um numero:  '))
+        raiz = math.sqrt(n1)
+    except:
+        print('Ops, houve um problema')
+        caldivi()
+    else:
+        print('A raiz de {}  é : {}'.format(n1, math.floor(raiz)))
+        init()
 
 
-print('Calculadora')
-operacao = input('Qual a operação que vc vai utilizar: ')
-if operacao == 'soma':
-    calsoma()
-elif operacao == 'subitração':
-    calsubi()
-elif operacao == 'mutiplicação':
-    calmuti()
-elif operacao == 'divisão':
-    caldivi()
-elif operacao == 'metros':
-    calmetros()
-elif operacao == 'sair':
-    print('Obrigado e volte sempre!!')
-else:
-    print('Ops, houve um problema')
+def init () :
+    print('Calculadora')
+
+    print('soma')
+    print('divisão')
+    print('mutiplicação')
+    print('subitração')
+    print('raiz')
+    print('metros')
+    print('sair')
     operacao = input('Qual a operação que vc vai utilizar: ')
+    if operacao == 'soma':
+        calsoma()
+    elif operacao == 'subitração':
+        calsubi()
+    elif operacao == 'mutiplicação':
+        calmuti()
+    elif operacao == 'divisão':
+        caldivi()
+    elif operacao == 'metros':
+        calmetros()
+    elif operacao == 'raiz':
+        calraiz()
+    elif operacao == 'sair':
+        print('Obrigado e volte sempre!!')
+    else:
+        print('Ops, houve um problema')
+        init()
+init()
