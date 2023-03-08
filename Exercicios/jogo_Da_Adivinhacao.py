@@ -16,10 +16,10 @@ def inti () :
     elif dif == "DIFICIL":
         dificil()
 def dnv() :
-    print("   " * 20)
-    print("   " * 20)
+    print("..." * 20)
+    print("..." * 20)
     print("Você quer tentar de novo?")
-    print("   " * 20)
+    print("..." * 20)
     res2 = input("sim ou não: ").upper()
     if  res2 == "SIM":
         inti()

@@ -28,4 +28,5 @@ plt.ylabel('Casos de dengue')
 plt.xticks([2018])
 plt.yticks([int(casos_2018)])
 
+
 plt.show()
