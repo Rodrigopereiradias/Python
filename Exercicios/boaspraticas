@@ -1,0 +1,10 @@
+"""
+CONSTANTE = "Variáveis" que não vão mudar
+'Escrever essas variasveis com letra maiusculas para facilitar para os outros programadores'
+
+
+
+
+Muitas condições no mesmo if (ruim)
+    <- Contagem de complexidade (ruim)
+"""

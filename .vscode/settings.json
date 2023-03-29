@@ -4,7 +4,7 @@
     "explorer.compactFolders": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 18,
-    "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+    "workbench.colorTheme": "Dracula Soft",
     "code-runner.executorMap": {
         "python": "clear ; python -u",
     },
